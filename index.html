@@ -155,7 +155,7 @@
           </div>
           <div class="story__item">
             <h3 class="story__label" data-i18n="story.label.how">Como é montado</h3>
-            <p data-i18n="data.story.how">São sete camadas. Ingestão e transformação com Sling e dbt, orquestradas pelo Dagster; catálogo no OpenMetadata; BI no Superset; portal executivo em React e FastAPI, com SSO e RLS por grupo; agente de IA com Dify, LiteLLM e Langfuse; Traefik na borda. Um único Postgres 17 é o datalake.</p>
+            <p data-i18n="data.story.how">São sete camadas. Ingestão e transformação com Sling e dbt, orquestradas pelo Dagster; catálogo no OpenMetadata; BI no Superset; portal executivo em React e FastAPI, com SSO e RLS por grupo; agente de IA com Dify, LiteLLM e Langfuse; Traefik na borda. Um único Postgres é o datalake.</p>
           </div>
           <div class="story__item">
             <h3 class="story__label" data-i18n="story.label.why">Por que assim</h3>
@@ -166,7 +166,7 @@
           <figure class="diagram" data-diagram="data-platform">
             <svg class="dg dg--wide" viewBox="0 0 680 490" role="img" aria-labelledby="dpw-t dpw-d" focusable="false">
               <title id="dpw-t" data-i18n="data.dg.title">Arquitetura da plataforma de dados em sete camadas</title>
-              <desc id="dpw-d" data-i18n="data.dg.desc">Diagrama de fluxo. Fontes de dados alimentam a camada de ingestão e transformação (Sling e dbt), que carrega o datalake PostgreSQL 17 e é orquestrada pelo Dagster. O Superset lê o datalake e seus dashboards são embutidos no portal executivo, que o executivo acessa pela borda Traefik. O portal conversa com o agente de IA (Dify, LiteLLM e Langfuse), que usa um provedor de modelo externo. O OpenMetadata cataloga o Postgres e recebe metadados do Dagster, com linhagem onde disponível. As camadas são numeradas de 1 a 7: ingestão e transformação, orquestração, catálogo e linhagem, BI, portal executivo, agente de IA e borda.</desc>
+              <desc id="dpw-d" data-i18n="data.dg.desc">Diagrama de fluxo. Fontes de dados alimentam a camada de ingestão e transformação (Sling e dbt), que carrega o datalake PostgreSQL e é orquestrada pelo Dagster. O Superset lê o datalake e seus dashboards são embutidos no portal executivo, que o executivo acessa pela borda Traefik. O portal conversa com o agente de IA (Dify, LiteLLM e Langfuse), que usa um provedor de modelo externo. O OpenMetadata cataloga o Postgres e recebe metadados do Dagster, com linhagem onde disponível. As camadas são numeradas de 1 a 7: ingestão e transformação, orquestração, catálogo e linhagem, BI, portal executivo, agente de IA e borda.</desc>
               <defs><marker id="dpw-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
               <path class="dg-edge" d="M444,46 H464" marker-end="url(#dpw-ah)"/>
               <path class="dg-edge" d="M568,78 V114" marker-end="url(#dpw-ah)"/>
@@ -241,7 +241,7 @@
               <g class="dg-node">
                 <rect class="dg-box dg-box--data" x="464" y="314" width="208" height="64" rx="8"/>
                 <text class="dg-name" x="568" y="338" text-anchor="middle" data-i18n="data.dg.lake.name">Datalake</text>
-                <text class="dg-sub" x="568" y="356" text-anchor="middle" data-i18n="data.dg.lake.sub">PostgreSQL 17</text>
+                <text class="dg-sub" x="568" y="356" text-anchor="middle" data-i18n="data.dg.lake.sub">PostgreSQL</text>
                 <text class="dg-sub" x="568" y="371" text-anchor="middle" data-i18n="data.dg.lake.sub2">raw_* → analytics_*</text>
               </g>
               <g class="dg-node">
@@ -266,7 +266,7 @@
             </svg>
             <svg class="dg dg--narrow" viewBox="0 0 320 580" role="img" aria-labelledby="dpn-t dpn-d" focusable="false">
               <title id="dpn-t" data-i18n="data.dg.title">Arquitetura da plataforma de dados em sete camadas</title>
-              <desc id="dpn-d" data-i18n="data.dg.desc">Diagrama de fluxo. Fontes de dados alimentam a camada de ingestão e transformação (Sling e dbt), que carrega o datalake PostgreSQL 17 e é orquestrada pelo Dagster. O Superset lê o datalake e seus dashboards são embutidos no portal executivo, que o executivo acessa pela borda Traefik. O portal conversa com o agente de IA (Dify, LiteLLM e Langfuse), que usa um provedor de modelo externo. O OpenMetadata cataloga o Postgres e recebe metadados do Dagster, com linhagem onde disponível. As camadas são numeradas de 1 a 7: ingestão e transformação, orquestração, catálogo e linhagem, BI, portal executivo, agente de IA e borda.</desc>
+              <desc id="dpn-d" data-i18n="data.dg.desc">Diagrama de fluxo. Fontes de dados alimentam a camada de ingestão e transformação (Sling e dbt), que carrega o datalake PostgreSQL e é orquestrada pelo Dagster. O Superset lê o datalake e seus dashboards são embutidos no portal executivo, que o executivo acessa pela borda Traefik. O portal conversa com o agente de IA (Dify, LiteLLM e Langfuse), que usa um provedor de modelo externo. O OpenMetadata cataloga o Postgres e recebe metadados do Dagster, com linhagem onde disponível. As camadas são numeradas de 1 a 7: ingestão e transformação, orquestração, catálogo e linhagem, BI, portal executivo, agente de IA e borda.</desc>
               <defs><marker id="dpn-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
               <path class="dg-edge" d="M152,38 H168" marker-end="url(#dpn-ah)"/>
               <path class="dg-edge" d="M240,66 V94" marker-end="url(#dpn-ah)"/>
@@ -310,7 +310,7 @@
               <g class="dg-node">
                 <rect class="dg-box dg-box--data" x="8" y="262" width="144" height="56" rx="8"/>
                 <text class="dg-name" x="80" y="283" text-anchor="middle" data-i18n="data.dg.lake.name">Datalake</text>
-                <text class="dg-sub" x="80" y="299" text-anchor="middle" data-i18n="data.dg.lake.sub">PostgreSQL 17</text>
+                <text class="dg-sub" x="80" y="299" text-anchor="middle" data-i18n="data.dg.lake.sub">PostgreSQL</text>
                 <text class="dg-sub" x="80" y="313" text-anchor="middle" data-i18n="data.dg.lake.sub2">raw_* → analytics_*</text>
               </g>
               <g class="dg-node">
@@ -352,11 +352,11 @@
           <aside class="decisions card">
             <h3 class="decisions__title" data-i18n="decisions.title">Decisões de arquitetura</h3>
             <ul>
-              <li class="decision"><strong class="decision__t" data-i18n="data.dec.1.t">Um Postgres, um role e um banco por serviço</strong> <span class="decision__b" data-i18n="data.dec.1.b">Todas as stacks usam o mesmo Postgres 17, mas cada serviço tem role e banco próprios; o role do datalake não é superusuário e não acessa os bancos do Dify, Langfuse e LiteLLM.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="data.dec.1.t">Um Postgres, um role e um banco por serviço</strong> <span class="decision__b" data-i18n="data.dec.1.b">Todas as stacks usam o mesmo Postgres, mas cada serviço tem role e banco próprios; o role do datalake não é superusuário e não acessa os bancos do Dify, Langfuse e LiteLLM.</span></li>
               <li class="decision"><strong class="decision__t" data-i18n="data.dec.2.t">Instalação por empresa, por um script</strong> <span class="decision__b" data-i18n="data.dec.2.b">Cada empresa ganha a própria instalação (portal single-tenant). O script gera os .env sem rotacionar segredos existentes, sobe os serviços na ordem certa e cria os administradores. Virar multi-tenant é uma refatoração conhecida, não uma reescrita.</span></li>
               <li class="decision"><strong class="decision__t" data-i18n="data.dec.3.t">Uma borda compartilhada</strong> <span class="decision__b" data-i18n="data.dec.3.b">Um único Traefik é a entrada pública de toda a solução, no lugar de um proxy por stack. O banco nunca fica na rede do proxy.</span></li>
               <li class="decision"><strong class="decision__t" data-i18n="data.dec.4.t">Embedding sem expor credenciais</strong> <span class="decision__b" data-i18n="data.dec.4.b">Só o backend fala com o endpoint de guest token do Superset. O frontend recebe um token de curta duração (cerca de 5 minutos), já com o RLS dos grupos do usuário.</span></li>
-              <li class="decision"><strong class="decision__t" data-i18n="data.dec.5.t">Superset como única ferramenta de BI</strong> <span class="decision__b" data-i18n="data.dec.5.b">Comparei três opções. O Lightdash não oferece embedding na edição open source auto-hospedada; o Superset é Apache 2.0, sem recursos travados, com RBAC e RLS maduros.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="data.dec.5.t">Superset como única ferramenta de BI</strong> <span class="decision__b" data-i18n="data.dec.5.b">Comparei três opções. O Lightdash não oferece embedding na edição open source auto-hospedada; o Superset tem licença Apache, sem recursos travados, com RBAC e RLS maduros.</span></li>
             </ul>
           </aside>
         </div>
@@ -378,7 +378,7 @@
           </div>
           <div class="story__item">
             <h3 class="story__label" data-i18n="story.label.how">Como é montado</h3>
-            <p data-i18n="loja.story.how">Monorepo pnpm com web em Next.js 15 e React 19, mobile em Expo (React Native) e API em Fastify v5 com TypeScript, sobre PostgreSQL 17 com Drizzle. Schemas Zod e design tokens são pacotes compartilhados. O isolamento entre organizações usa uma coluna de tenant em cada tabela de dados de tenant, mais RLS, e a autenticação é própria, com JWT RS256.</p>
+            <p data-i18n="loja.story.how">Monorepo pnpm com web em Next.js e React, mobile em Expo (React Native) e API em Fastify com TypeScript, sobre PostgreSQL com Drizzle. Schemas Zod e design tokens são pacotes compartilhados. O isolamento entre organizações usa uma coluna de tenant em cada tabela de dados de tenant, mais RLS, e a autenticação é própria, com JWT RS256.</p>
           </div>
           <div class="story__item">
             <h3 class="story__label" data-i18n="story.label.why">Por que assim</h3>
@@ -389,7 +389,7 @@
                     <figure class="diagram" data-diagram="minha-loja">
             <svg class="dg dg--wide" viewBox="0 0 680 470" role="img" aria-labelledby="mlw-t mlw-d" focusable="false">
               <title id="mlw-t" data-i18n="loja.dg.title">Arquitetura do Minha Loja: web, mobile, API, banco e pacotes compartilhados</title>
-              <desc id="mlw-d" data-i18n="loja.dg.desc">Diagrama em camadas. Os apps web (Next.js) e mobile (Expo) chamam a mesma API Fastify, que aplica autenticação JWT RS256, permissões, serviços e repositórios. A API grava no PostgreSQL 17, onde cada tabela de dados de tenant tem uma coluna de tenant protegida por RLS. Pacotes compartilhados de schemas Zod e design tokens são usados por web, mobile e API.</desc>
+              <desc id="mlw-d" data-i18n="loja.dg.desc">Diagrama em camadas. Os apps web (Next.js) e mobile (Expo) chamam a mesma API Fastify, que aplica autenticação JWT RS256, permissões, serviços e repositórios. A API grava no PostgreSQL, onde cada tabela de dados de tenant tem uma coluna de tenant protegida por RLS. Pacotes compartilhados de schemas Zod e design tokens são usados por web, mobile e API.</desc>
               <defs><marker id="mlw-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
               <path class="dg-edge dg-edge--meta" d="M185,76 V132" marker-end="url(#mlw-ah)"/>
               <path class="dg-edge dg-edge--meta" d="M495,76 V132" marker-end="url(#mlw-ah)"/>
@@ -406,7 +406,7 @@
               <g class="dg-node">
                 <rect class="dg-box dg-box--actor" x="60" y="132" width="250" height="64" rx="8"/>
                 <text class="dg-name" x="185" y="156" text-anchor="middle" data-i18n="loja.dg.web.name">Web</text>
-                <text class="dg-sub" x="185" y="174" text-anchor="middle" data-i18n="loja.dg.web.sub">Next.js 15 · React 19</text>
+                <text class="dg-sub" x="185" y="174" text-anchor="middle" data-i18n="loja.dg.web.sub">Next.js · React</text>
                 <text class="dg-sub" x="185" y="189" text-anchor="middle" data-i18n="loja.dg.web.sub2">área autenticada</text>
               </g>
               <g class="dg-node">
@@ -418,12 +418,12 @@
               <g class="dg-node">
                 <rect class="dg-box dg-box--layer" x="60" y="252" width="560" height="76" rx="8"/>
                 <text class="dg-name" x="340" y="276" text-anchor="middle" data-i18n="loja.dg.api.name">API</text>
-                <text class="dg-sub" x="340" y="296" text-anchor="middle" data-i18n="loja.dg.api.sub">Fastify v5 · TypeScript · OpenAPI</text>
+                <text class="dg-sub" x="340" y="296" text-anchor="middle" data-i18n="loja.dg.api.sub">Fastify · TypeScript · OpenAPI</text>
                 <text class="dg-sub" x="340" y="314" text-anchor="middle" data-i18n="loja.dg.api.sub2">auth → permissões → serviço → repositório</text>
               </g>
               <g class="dg-node">
                 <rect class="dg-box dg-box--data" x="60" y="380" width="560" height="76" rx="8"/>
-                <text class="dg-name" x="340" y="404" text-anchor="middle" data-i18n="loja.dg.db.name">PostgreSQL 17 + Drizzle</text>
+                <text class="dg-name" x="340" y="404" text-anchor="middle" data-i18n="loja.dg.db.name">PostgreSQL + Drizzle</text>
                 <text class="dg-sub" x="340" y="424" text-anchor="middle" data-i18n="loja.dg.db.sub">coluna de tenant em tabelas de tenant · RLS</text>
                 <text class="dg-sub" x="340" y="442" text-anchor="middle" data-i18n="loja.dg.db.sub2">livro financeiro append-only · log de auditoria</text>
               </g>
@@ -433,7 +433,7 @@
             </svg>
             <svg class="dg dg--narrow" viewBox="0 0 320 330" role="img" aria-labelledby="mln-t mln-d" focusable="false">
               <title id="mln-t" data-i18n="loja.dg.title">Arquitetura do Minha Loja: web, mobile, API, banco e pacotes compartilhados</title>
-              <desc id="mln-d" data-i18n="loja.dg.desc">Diagrama em camadas. Os apps web (Next.js) e mobile (Expo) chamam a mesma API Fastify, que aplica autenticação JWT RS256, permissões, serviços e repositórios. A API grava no PostgreSQL 17, onde cada tabela de dados de tenant tem uma coluna de tenant protegida por RLS. Pacotes compartilhados de schemas Zod e design tokens são usados por web, mobile e API.</desc>
+              <desc id="mln-d" data-i18n="loja.dg.desc">Diagrama em camadas. Os apps web (Next.js) e mobile (Expo) chamam a mesma API Fastify, que aplica autenticação JWT RS256, permissões, serviços e repositórios. A API grava no PostgreSQL, onde cada tabela de dados de tenant tem uma coluna de tenant protegida por RLS. Pacotes compartilhados de schemas Zod e design tokens são usados por web, mobile e API.</desc>
               <defs><marker id="mln-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
               <path class="dg-edge dg-edge--meta" d="M80,66 V94" marker-end="url(#mln-ah)"/>
               <path class="dg-edge dg-edge--meta" d="M240,66 V94" marker-end="url(#mln-ah)"/>
@@ -449,7 +449,7 @@
               <g class="dg-node">
                 <rect class="dg-box dg-box--actor" x="8" y="94" width="144" height="56" rx="8"/>
                 <text class="dg-name" x="80" y="115" text-anchor="middle" data-i18n="loja.dg.web.name">Web</text>
-                <text class="dg-sub" x="80" y="131" text-anchor="middle" data-i18n="loja.dg.web.sub">Next.js 15 · React 19</text>
+                <text class="dg-sub" x="80" y="131" text-anchor="middle" data-i18n="loja.dg.web.sub">Next.js · React</text>
                 <text class="dg-sub" x="80" y="145" text-anchor="middle" data-i18n="loja.dg.web.sub2">área autenticada</text>
               </g>
               <g class="dg-node">
@@ -460,12 +460,12 @@
               <g class="dg-node">
                 <rect class="dg-box dg-box--layer" x="8" y="178" width="304" height="56" rx="8"/>
                 <text class="dg-name" x="160" y="199" text-anchor="middle" data-i18n="loja.dg.api.name">API</text>
-                <text class="dg-sub" x="160" y="215" text-anchor="middle" data-i18n="loja.dg.api.sub">Fastify v5 · TypeScript · OpenAPI</text>
+                <text class="dg-sub" x="160" y="215" text-anchor="middle" data-i18n="loja.dg.api.sub">Fastify · TypeScript · OpenAPI</text>
                 <text class="dg-sub" x="160" y="229" text-anchor="middle" data-i18n="loja.dg.api.sub2">auth → permissões → serviço → repositório</text>
               </g>
               <g class="dg-node">
                 <rect class="dg-box dg-box--data" x="8" y="262" width="304" height="56" rx="8"/>
-                <text class="dg-name" x="160" y="283" text-anchor="middle" data-i18n="loja.dg.db.name">PostgreSQL 17 + Drizzle</text>
+                <text class="dg-name" x="160" y="283" text-anchor="middle" data-i18n="loja.dg.db.name">PostgreSQL + Drizzle</text>
                 <text class="dg-sub" x="160" y="299" text-anchor="middle" data-i18n="loja.dg.db.sub">coluna de tenant em tabelas de tenant · RLS</text>
                 <text class="dg-sub" x="160" y="313" text-anchor="middle" data-i18n="loja.dg.db.sub2">livro financeiro append-only · log de auditoria</text>
               </g>
@@ -552,7 +552,7 @@
           </div>
           <div class="story__item">
             <h3 class="story__label" data-i18n="story.label.how">Como é montado</h3>
-            <p data-i18n="lou.story.how">App em Expo (React Native, Expo Router), com estado em Zustand e dados do servidor em TanStack Query. API FastAPI com SQLAlchemy assíncrono e Alembic sobre PostgreSQL 16, com Redis 7 provisionado no Compose. Tudo roda em Docker Compose numa VM Linux, com nginx no stack de produção.</p>
+            <p data-i18n="lou.story.how">App em Expo (React Native, Expo Router), com estado em Zustand e dados do servidor em TanStack Query. API FastAPI com SQLAlchemy assíncrono e Alembic sobre PostgreSQL, com Redis provisionado no Compose. Tudo roda em Docker Compose numa VM Linux, com nginx no stack de produção.</p>
           </div>
           <div class="story__item">
             <h3 class="story__label" data-i18n="story.label.why">Por que assim</h3>
@@ -563,7 +563,7 @@
           <figure class="diagram" data-diagram="lou">
             <svg class="dg dg--wide" viewBox="0 0 680 434" role="img" aria-labelledby="louw-t louw-d" focusable="false">
               <title id="louw-t" data-i18n="lou.dg.title">Arquitetura do LOU: app mobile, API, PostgreSQL e duas regiões</title>
-              <desc id="louw-d" data-i18n="lou.dg.desc">Diagrama de arquitetura. O app mobile em Expo atende duas regiões: DACH, com alemão como idioma padrão (de, de-AT e de-CH), e Brasil (pt-BR). O app fala com uma API FastAPI, que usa PostgreSQL 16 com RLS e envia notificações push pela Expo Push API. Redis 7 está provisionado no Docker Compose, mas ainda não é usado pela aplicação. Tudo roda numa VM Linux com Docker Compose, com nginx no stack de produção.</desc>
+              <desc id="louw-d" data-i18n="lou.dg.desc">Diagrama de arquitetura. O app mobile em Expo atende duas regiões: DACH, com alemão como idioma padrão (de, de-AT e de-CH), e Brasil (pt-BR). O app fala com uma API FastAPI, que usa PostgreSQL com RLS e envia notificações push pela Expo Push API. Redis está provisionado no Docker Compose, mas ainda não é usado pela aplicação. Tudo roda numa VM Linux com Docker Compose, com nginx no stack de produção.</desc>
               <defs><marker id="louw-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
               <path class="dg-edge dg-edge--meta" d="M113,66 V116" marker-end="url(#louw-ah)"/>
               <path class="dg-edge dg-edge--meta" d="M343,66 V116" marker-end="url(#louw-ah)"/>
@@ -604,25 +604,25 @@
               <g class="dg-node">
                 <rect class="dg-box dg-box--layer" x="164" y="248" width="260" height="64" rx="8"/>
                 <text class="dg-name" x="294" y="272" text-anchor="middle" data-i18n="lou.dg.api.name">API</text>
-                <text class="dg-sub" x="294" y="290" text-anchor="middle" data-i18n="lou.dg.api.sub">FastAPI · SQLAlchemy 2 async</text>
+                <text class="dg-sub" x="294" y="290" text-anchor="middle" data-i18n="lou.dg.api.sub">FastAPI · SQLAlchemy async</text>
                 <text class="dg-sub" x="294" y="305" text-anchor="middle" data-i18n="lou.dg.api.sub2">routers · RoleGuard · agendador</text>
               </g>
               <g class="dg-node">
                 <rect class="dg-box dg-box--data" x="444" y="248" width="212" height="64" rx="8"/>
-                <text class="dg-name" x="550" y="272" text-anchor="middle" data-i18n="lou.dg.pg.name">PostgreSQL 16</text>
+                <text class="dg-name" x="550" y="272" text-anchor="middle" data-i18n="lou.dg.pg.name">PostgreSQL</text>
                 <text class="dg-sub" x="550" y="290" text-anchor="middle" data-i18n="lou.dg.pg.sub">RLS · role sem dono</text>
                 <text class="dg-sub" x="550" y="305" text-anchor="middle" data-i18n="lou.dg.pg.sub2">migrações Alembic</text>
               </g>
               <g class="dg-node">
                 <rect class="dg-box dg-box--ext" x="164" y="338" width="260" height="64" rx="8"/>
-                <text class="dg-name" x="294" y="362" text-anchor="middle" data-i18n="lou.dg.redis.name">Redis 7</text>
+                <text class="dg-name" x="294" y="362" text-anchor="middle" data-i18n="lou.dg.redis.name">Redis</text>
                 <text class="dg-sub" x="294" y="380" text-anchor="middle" data-i18n="lou.dg.redis.sub">provisionado no Compose</text>
                 <text class="dg-sub" x="294" y="395" text-anchor="middle" data-i18n="lou.dg.redis.sub2">ainda sem uso na aplicação</text>
               </g>
             </svg>
             <svg class="dg dg--narrow" viewBox="0 0 320 440" role="img" aria-labelledby="loun-t loun-d" focusable="false">
               <title id="loun-t" data-i18n="lou.dg.title">Arquitetura do LOU: app mobile, API, PostgreSQL e duas regiões</title>
-              <desc id="loun-d" data-i18n="lou.dg.desc">Diagrama de arquitetura. O app mobile em Expo atende duas regiões: DACH, com alemão como idioma padrão (de, de-AT e de-CH), e Brasil (pt-BR). O app fala com uma API FastAPI, que usa PostgreSQL 16 com RLS e envia notificações push pela Expo Push API. Redis 7 está provisionado no Docker Compose, mas ainda não é usado pela aplicação. Tudo roda numa VM Linux com Docker Compose, com nginx no stack de produção.</desc>
+              <desc id="loun-d" data-i18n="lou.dg.desc">Diagrama de arquitetura. O app mobile em Expo atende duas regiões: DACH, com alemão como idioma padrão (de, de-AT e de-CH), e Brasil (pt-BR). O app fala com uma API FastAPI, que usa PostgreSQL com RLS e envia notificações push pela Expo Push API. Redis está provisionado no Docker Compose, mas ainda não é usado pela aplicação. Tudo roda numa VM Linux com Docker Compose, com nginx no stack de produção.</desc>
               <defs><marker id="loun-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
               <path class="dg-edge dg-edge--meta" d="M80,66 V94" marker-end="url(#loun-ah)"/>
               <path class="dg-edge dg-edge--meta" d="M240,66 V94" marker-end="url(#loun-ah)"/>
@@ -649,12 +649,12 @@
               <g class="dg-node">
                 <rect class="dg-box dg-box--layer" x="8" y="178" width="304" height="56" rx="8"/>
                 <text class="dg-name" x="160" y="199" text-anchor="middle" data-i18n="lou.dg.api.name">API</text>
-                <text class="dg-sub" x="160" y="215" text-anchor="middle" data-i18n="lou.dg.api.sub">FastAPI · SQLAlchemy 2 async</text>
+                <text class="dg-sub" x="160" y="215" text-anchor="middle" data-i18n="lou.dg.api.sub">FastAPI · SQLAlchemy async</text>
                 <text class="dg-sub" x="160" y="229" text-anchor="middle" data-i18n="lou.dg.api.sub2">routers · RoleGuard · agendador</text>
               </g>
               <g class="dg-node">
                 <rect class="dg-box dg-box--data" x="8" y="262" width="144" height="56" rx="8"/>
-                <text class="dg-name" x="80" y="287" text-anchor="middle" data-i18n="lou.dg.pg.name">PostgreSQL 16</text>
+                <text class="dg-name" x="80" y="287" text-anchor="middle" data-i18n="lou.dg.pg.name">PostgreSQL</text>
                 <text class="dg-sub" x="80" y="305" text-anchor="middle" data-i18n="lou.dg.pg.sub">RLS · role sem dono</text>
               </g>
               <g class="dg-node">
@@ -664,7 +664,7 @@
               </g>
               <g class="dg-node">
                 <rect class="dg-box dg-box--ext" x="8" y="346" width="304" height="56" rx="8"/>
-                <text class="dg-name" x="160" y="367" text-anchor="middle" data-i18n="lou.dg.redis.name">Redis 7</text>
+                <text class="dg-name" x="160" y="367" text-anchor="middle" data-i18n="lou.dg.redis.name">Redis</text>
                 <text class="dg-sub" x="160" y="383" text-anchor="middle" data-i18n="lou.dg.redis.sub">provisionado no Compose</text>
                 <text class="dg-sub" x="160" y="397" text-anchor="middle" data-i18n="lou.dg.redis.sub2">ainda sem uso na aplicação</text>
               </g>
@@ -809,7 +809,7 @@
           <div class="stack-group">
             <h3 data-i18n="stack.group.frontend">Frontend e Mobile</h3>
             <ul class="chips stack-chips">
-              <li class="chip">React 19</li>
+              <li class="chip">React</li>
               <li class="chip">TypeScript</li>
               <li class="chip">Vite</li>
               <li class="chip">Next.js</li>
