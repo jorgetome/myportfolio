@@ -1,0 +1,99 @@
+/*
+ * tokens.css - design tokens for the portfolio ("engineering notebook" look).
+ * Single source for palette, type, spacing and radii. Other stylesheets only
+ * reference these custom properties.
+ *
+ * Dark values are duplicated on purpose: CSS cannot share one declaration
+ * block between a media query and an attribute selector without a build step.
+ *   - @dark-media : follows the OS preference unless the user forced light
+ *   - @dark-attr  : user forced dark through data-theme="dark"
+ */
+
+/* @light */
+:root {
+  --color-bg: #f6f4ee;
+  --color-surface: #ffffff;
+  --color-surface-2: #ece9df;
+  --color-text: #14181f;
+  --color-text-muted: #4a5260;
+  --color-border: #d6d2c4;
+  --color-accent: #0b6e6e;
+  --color-on-accent: #ffffff;
+  --color-accent-2: #9a4a07;
+  --color-accent-soft: #d8eeec;
+  --color-accent-2-soft: #f5e6d2;
+  --color-grid: rgba(20, 24, 31, 0.07);
+  --shadow-1: 0 1px 2px rgba(20, 24, 31, 0.08);
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  --gutter: 16px;
+  --container: 1080px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+
+  --fs--1: 0.8125rem;
+  --fs-0: 1rem;
+  --fs-1: 1.125rem;
+  --fs-2: clamp(1.375rem, 1.1rem + 1.2vw, 1.75rem);
+  --fs-3: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);
+  --fs-4: clamp(2.25rem, 1.5rem + 4vw, 4rem);
+
+  --lh-body: 1.6;
+  --lh-tight: 1.15;
+
+  --focus-ring: 3px solid var(--color-accent);
+
+  color-scheme: light;
+}
+
+/* @dark-media */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #0b1117;
+    --color-surface: #131b24;
+    --color-surface-2: #1a2431;
+    --color-text: #e8edf3;
+    --color-text-muted: #a3afbf;
+    --color-border: #2a3748;
+    --color-accent: #4fd1c5;
+    --color-on-accent: #04201e;
+    --color-accent-2: #f0a45d;
+    --color-accent-soft: #123a3d;
+    --color-accent-2-soft: #3b2a14;
+    --color-grid: rgba(232, 237, 243, 0.06);
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+    color-scheme: dark;
+  }
+}
+
+/* @dark-attr */
+:root[data-theme="dark"] {
+  --color-bg: #0b1117;
+  --color-surface: #131b24;
+  --color-surface-2: #1a2431;
+  --color-text: #e8edf3;
+  --color-text-muted: #a3afbf;
+  --color-border: #2a3748;
+  --color-accent: #4fd1c5;
+  --color-on-accent: #04201e;
+  --color-accent-2: #f0a45d;
+  --color-accent-soft: #123a3d;
+  --color-accent-2-soft: #3b2a14;
+  --color-grid: rgba(232, 237, 243, 0.06);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+  color-scheme: dark;
+}

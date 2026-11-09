@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jorge Tomé — Portfólio · Dados + IA e Arquitetura de Dados</title>
+  <meta name="description" content="Portfólio de Jorge Tomé: plataformas de dados com IA, de ponta a ponta — Arquitetura de Dados, Minha Loja e LOU." data-i18n-attr="content:meta.description">
+  <!-- Publicação: estas tags são estáticas e só em português (crawlers não executam JS).
+       Se o usuário ou o nome do repositório mudarem, atualize a URL do GitHub Pages abaixo e no README.
+       A imagem é assets/img/cover.png (1200x630). -->
+  <link rel="canonical" href="https://jorgetome.github.io/myportfolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jorge Tomé">
+  <meta property="og:title" content="Jorge Tomé — Portfólio · Dados + IA e Arquitetura de Dados">
+  <meta property="og:description" content="Portfólio de Jorge Tomé: plataformas de dados com IA, de ponta a ponta — Arquitetura de Dados, Minha Loja e LOU.">
+  <meta property="og:url" content="https://jorgetome.github.io/myportfolio/">
+  <meta property="og:image" content="https://jorgetome.github.io/myportfolio/assets/img/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Diagrama da arquitetura da plataforma de dados do portfólio, em camadas, da ingestão ao portal executivo.">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jorge Tomé — Portfólio · Dados + IA e Arquitetura de Dados">
+  <meta name="twitter:description" content="Portfólio de Jorge Tomé: plataformas de dados com IA, de ponta a ponta — Arquitetura de Dados, Minha Loja e LOU.">
+  <meta name="twitter:image" content="https://jorgetome.github.io/myportfolio/assets/img/cover.png">
+  <meta name="twitter:image:alt" content="Diagrama da arquitetura da plataforma de dados do portfólio, em camadas, da ingestão ao portal executivo.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/diagram.css">
+  <link rel="stylesheet" href="assets/css/project.css">
+  <link rel="stylesheet" href="assets/css/content.css">
+  <link rel="stylesheet" href="assets/css/mockup-loja.css">
+  <link rel="stylesheet" href="assets/css/mockup-lou.css">
+  <script src="assets/js/config.js"></script>
+  <script src="assets/i18n/pt.js"></script>
+  <script src="assets/i18n/en.js"></script>
+  <script src="assets/i18n/sections/content.js"></script>
+  <script src="assets/i18n/sections/data.js"></script>
+  <script src="assets/i18n/sections/loja.js"></script>
+  <script src="assets/i18n/sections/lou.js"></script>
+  <script src="assets/js/boot.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip.link">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#hero" data-config="name">Jorge Tomé</a>
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Idioma" data-i18n-attr="aria-label:ui.lang.label">
+          <button type="button" class="seg__btn" data-lang-btn="pt" lang="pt" aria-pressed="true">PT</button>
+          <button type="button" class="seg__btn" data-lang-btn="en" lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Tema escuro" data-i18n-attr="aria-label:ui.theme.dark">
+          <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 1.5v13a6.5 6.5 0 0 1 0-13Z"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="nav" aria-label="Navegação principal" data-i18n-attr="aria-label:nav.label">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#projects" data-i18n="nav.projects">Projetos</a></li>
+          <li><a class="nav__link" href="#method" data-i18n="nav.method">Como eu construo</a></li>
+          <li><a class="nav__link" href="#stack" data-i18n="nav.stack">Stack e competências</a></li>
+          <li><a class="nav__link" href="#contact" data-i18n="nav.contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="hero" class="section hero" aria-labelledby="hero-name">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow" data-i18n="hero.eyebrow">Portfólio</p>
+          <h1 id="hero-name" class="hero__name" data-config="name">Jorge Tomé</h1>
+          <p class="hero__headline" data-config="headline">Dados + IA / Arquitetura de Dados</p>
+          <p class="hero__tagline" data-i18n="hero.tagline">Projeto e entrego plataformas de dados com IA de ponta a ponta, com decisões de arquitetura justificadas.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects" data-i18n="hero.cta.primary">Ver os projetos</a>
+            <a class="btn btn--ghost" href="#contact" data-i18n="hero.cta.secondary">Falar comigo</a>
+          </div>
+          <ul class="chips">
+            <li class="chip" data-i18n="hero.chip1">Plataforma de dados</li>
+            <li class="chip" data-i18n="hero.chip2">Full stack e mobile</li>
+            <li class="chip" data-i18n="hero.chip3">Desenvolvimento assistido por IA</li>
+          </ul>
+          <ul class="link-list" aria-label="Links de contato" data-i18n-attr="aria-label:hero.links.label">
+            <li><a data-link="linkedin" href="#contact" data-i18n="link.linkedin">LinkedIn</a></li>
+            <li><a data-link="github" href="#contact" data-i18n="link.github">GitHub</a></li>
+            <li><a data-link="email" href="#contact" data-i18n="link.email">E-mail</a></li>
+          </ul>
+        </div>
+        <div class="hero__art" aria-hidden="true">
+          <svg viewBox="0 0 320 240" focusable="false">
+            <rect class="art-bar" x="30" y="8" width="260" height="20" rx="4"/>
+            <rect class="art-bar art-bar--alt" x="30" y="42" width="230" height="20" rx="4"/>
+            <rect class="art-bar" x="30" y="76" width="200" height="20" rx="4"/>
+            <rect class="art-bar art-bar--alt" x="30" y="110" width="175" height="20" rx="4"/>
+            <rect class="art-bar" x="30" y="144" width="150" height="20" rx="4"/>
+            <rect class="art-bar art-bar--alt" x="30" y="178" width="120" height="20" rx="4"/>
+            <rect class="art-bar" x="30" y="212" width="95" height="20" rx="4"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section--alt" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker" aria-hidden="true">01</p>
+          <h2 id="projects-title" class="section__title" data-i18n="common.projects.title">Projetos</h2>
+          <p class="section__lead" data-i18n="common.projects.lead">Três projetos construídos de ponta a ponta. Escolha um para ver o diagrama e as decisões de arquitetura.</p>
+        </header>
+        <ul class="project-cards">
+          <li class="project-card project-card--anchor">
+            <span class="project__tag" data-i18n="data.tag">Projeto-âncora</span>
+            <h3 class="project-card__title" data-i18n="data.title">Arquitetura de Dados</h3>
+            <p class="project-card__lead" data-i18n="data.lead">Plataforma de dados instalável por empresa, com stack open source.</p>
+            <a class="btn btn--primary" href="#data-platform" data-i18n="common.projects.cta">Ver detalhes</a>
+          </li>
+          <li class="project-card">
+            <span class="project__tag" data-i18n="loja.tag">SaaS web e mobile</span>
+            <h3 class="project-card__title" data-i18n="loja.title">Minha Loja</h3>
+            <p class="project-card__lead" data-i18n="loja.lead">SaaS de gestão administrativa para organizações de associados.</p>
+            <a class="btn btn--ghost" href="#minha-loja" data-i18n="common.projects.cta">Ver detalhes</a>
+          </li>
+          <li class="project-card">
+            <span class="project__tag" data-i18n="lou.tag">App mobile e API</span>
+            <h3 class="project-card__title" data-i18n="lou.title">LOU</h3>
+            <p class="project-card__lead" data-i18n="lou.lead">App de bem-estar e relacionamento para casais 35+.</p>
+            <a class="btn btn--ghost" href="#lou" data-i18n="common.projects.cta">Ver detalhes</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="data-platform" class="section project" aria-labelledby="data-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker" aria-hidden="true">02</p>
+          <h2 id="data-title" class="section__title" data-i18n="data.title">Arquitetura de Dados</h2>
+          <span class="project__tag" data-i18n="data.tag">Projeto-âncora</span>
+          <p class="section__lead" data-i18n="data.lead">Plataforma de dados instalável por empresa, com stack open source.</p>
+        </header>
+        <div class="story">
+          <div class="story__item">
+            <h3 class="story__label" data-i18n="story.label.what">O que é</h3>
+            <p data-i18n="data.story.what">Uma plataforma de dados instalada por empresa por um script interativo: ingere dados das fontes, transforma, cataloga, serve dashboards em um portal executivo próprio e inclui um agente de IA. Tudo roda em containers, sobre stack open source.</p>
+          </div>
+          <div class="story__item">
+            <h3 class="story__label" data-i18n="story.label.how">Como é montado</h3>
+            <p data-i18n="data.story.how">São sete camadas. Ingestão e transformação com Sling e dbt, orquestradas pelo Dagster; catálogo no OpenMetadata; BI no Superset; portal executivo em React e FastAPI, com SSO e RLS por grupo; agente de IA com Dify, LiteLLM e Langfuse; Traefik na borda. Um único Postgres 17 é o datalake.</p>
+          </div>
+          <div class="story__item">
+            <h3 class="story__label" data-i18n="story.label.why">Por que assim</h3>
+            <p data-i18n="data.story.why">Montei conjuntos fechados de ferramentas open source, com o volume de dados como principal critério de corte e o Postgres como datalake em todas as variantes. Escolhi o Dagster pela integração nativa com o dbt e pela operação mais leve, e adotei uma única ferramenta de BI, para manter tudo simples.</p>
+          </div>
+        </div>
+        <div class="project__grid">
+          <figure class="diagram" data-diagram="data-platform">
+            <svg class="dg dg--wide" viewBox="0 0 680 490" role="img" aria-labelledby="dpw-t dpw-d" focusable="false">
+              <title id="dpw-t" data-i18n="data.dg.title">Arquitetura da plataforma de dados em sete camadas</title>
+              <desc id="dpw-d" data-i18n="data.dg.desc">Diagrama de fluxo. Fontes de dados alimentam a camada de ingestão e transformação (Sling e dbt), que carrega o datalake PostgreSQL 17 e é orquestrada pelo Dagster. O Superset lê o datalake e seus dashboards são embutidos no portal executivo, que o executivo acessa pela borda Traefik. O portal conversa com o agente de IA (Dify, LiteLLM e Langfuse), que usa um provedor de modelo externo. O OpenMetadata cataloga o Postgres e recebe metadados do Dagster, com linhagem onde disponível. As camadas são numeradas de 1 a 7: ingestão e transformação, orquestração, catálogo e linhagem, BI, portal executivo, agente de IA e borda.</desc>
+              <defs><marker id="dpw-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+              <path class="dg-edge" d="M444,46 H464" marker-end="url(#dpw-ah)"/>
+              <path class="dg-edge" d="M568,78 V114" marker-end="url(#dpw-ah)"/>
+              <path class="dg-edge" d="M464,146 H444" marker-end="url(#dpw-ah)"/>
+              <path class="dg-edge" d="M236,146 H216" marker-end="url(#dpw-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M568,214 V178" marker-end="url(#dpw-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M568,314 V278" marker-end="url(#dpw-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M216,346 H236" marker-end="url(#dpw-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M444,346 H464" marker-end="url(#dpw-ah)"/>
+              <path class="dg-edge" d="M340,414 V378" marker-end="url(#dpw-ah)"/>
+              <path class="dg-edge dg-edge--meta" d="M568,414 V378" marker-end="url(#dpw-ah)"/>
+              <path class="dg-edge dg-edge--meta" d="M444,446 H464" marker-end="url(#dpw-ah)"/>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--note" x="8" y="14" width="208" height="64" rx="8"/>
+                <text class="dg-label" x="60" y="28" text-anchor="start" data-i18n="data.dg.legend.flow">fluxo de dados</text>
+                <text class="dg-label" x="60" y="45" text-anchor="start" data-i18n="data.dg.legend.meta">metadados</text>
+                <text class="dg-label" x="60" y="62" text-anchor="start" data-i18n="data.dg.legend.layer">camada</text>
+              </g>
+              <path class="dg-edge" d="M20,24 H48" marker-end="url(#dpw-ah)"/>
+              <path class="dg-edge dg-edge--meta" d="M20,41 H48" marker-end="url(#dpw-ah)"/>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="34" cy="58" r="8"/><text class="dg-badge__n" x="34" y="62" text-anchor="middle">1</text></g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="236" y="14" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="340" y="42" text-anchor="middle" data-i18n="data.dg.exec.name">Executivo</text>
+                <text class="dg-sub" x="340" y="60" text-anchor="middle" data-i18n="data.dg.exec.sub">navegador · HTTPS</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="464" y="14" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="568" y="38" text-anchor="middle" data-i18n="data.dg.edge.name">Borda</text>
+                <text class="dg-sub" x="568" y="56" text-anchor="middle" data-i18n="data.dg.edge.sub">Traefik</text>
+                <text class="dg-sub" x="568" y="71" text-anchor="middle" data-i18n="data.dg.edge.sub2">proxy reverso · TLS</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--ext" x="8" y="114" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="112" y="142" text-anchor="middle" data-i18n="data.dg.model.name">Modelo de IA</text>
+                <text class="dg-sub" x="112" y="160" text-anchor="middle" data-i18n="data.dg.model.sub">provedor externo</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="236" y="114" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="340" y="138" text-anchor="middle" data-i18n="data.dg.agent.name">Agente de IA</text>
+                <text class="dg-sub" x="340" y="156" text-anchor="middle" data-i18n="data.dg.agent.sub">Dify · LiteLLM</text>
+                <text class="dg-sub" x="340" y="171" text-anchor="middle" data-i18n="data.dg.agent.sub2">Langfuse (rastreio)</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="464" y="114" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="568" y="138" text-anchor="middle" data-i18n="data.dg.portal.name">Portal executivo</text>
+                <text class="dg-sub" x="568" y="156" text-anchor="middle" data-i18n="data.dg.portal.sub">SSO · RLS por grupo</text>
+                <text class="dg-sub" x="568" y="171" text-anchor="middle" data-i18n="data.dg.portal.sub2">dashboards embutidos</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--note" x="8" y="214" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="112" y="238" text-anchor="middle" data-i18n="data.dg.nets.name">3 redes Docker</text>
+                <text class="dg-sub" x="112" y="256" text-anchor="middle" data-i18n="data.dg.nets.sub">proxy · database · data-agent</text>
+                <text class="dg-sub" x="112" y="271" text-anchor="middle" data-i18n="data.dg.nets.sub2">banco fora da rede do proxy</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="464" y="214" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="568" y="238" text-anchor="middle" data-i18n="data.dg.bi.name">BI</text>
+                <text class="dg-sub" x="568" y="256" text-anchor="middle" data-i18n="data.dg.bi.sub">Apache Superset</text>
+                <text class="dg-sub" x="568" y="271" text-anchor="middle" data-i18n="data.dg.bi.sub2">lê analytics_*</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="8" y="314" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="112" y="342" text-anchor="middle" data-i18n="data.dg.src.name">Fontes de dados</text>
+                <text class="dg-sub" x="112" y="360" text-anchor="middle" data-i18n="data.dg.src.sub">bancos de origem</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="236" y="314" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="340" y="342" text-anchor="middle" data-i18n="data.dg.ingest.name">Ingestão e transformação</text>
+                <text class="dg-sub" x="340" y="360" text-anchor="middle" data-i18n="data.dg.ingest.sub">Sling + dbt</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--data" x="464" y="314" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="568" y="338" text-anchor="middle" data-i18n="data.dg.lake.name">Datalake</text>
+                <text class="dg-sub" x="568" y="356" text-anchor="middle" data-i18n="data.dg.lake.sub">PostgreSQL 17</text>
+                <text class="dg-sub" x="568" y="371" text-anchor="middle" data-i18n="data.dg.lake.sub2">raw_* → analytics_*</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="236" y="414" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="340" y="438" text-anchor="middle" data-i18n="data.dg.orch.name">Orquestração</text>
+                <text class="dg-sub" x="340" y="456" text-anchor="middle" data-i18n="data.dg.orch.sub">Dagster</text>
+                <text class="dg-sub" x="340" y="471" text-anchor="middle" data-i18n="data.dg.orch.sub2">agenda e observa</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="464" y="414" width="208" height="64" rx="8"/>
+                <text class="dg-name" x="568" y="438" text-anchor="middle" data-i18n="data.dg.catalog.name">Catálogo e linhagem</text>
+                <text class="dg-sub" x="568" y="456" text-anchor="middle" data-i18n="data.dg.catalog.sub">OpenMetadata</text>
+                <text class="dg-sub" x="568" y="471" text-anchor="middle" data-i18n="data.dg.catalog.sub2">linhagem onde disponível</text>
+              </g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="478" cy="14" r="11"/><text class="dg-badge__n" x="478" y="18" text-anchor="middle">7</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="250" cy="114" r="11"/><text class="dg-badge__n" x="250" y="118" text-anchor="middle">6</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="478" cy="114" r="11"/><text class="dg-badge__n" x="478" y="118" text-anchor="middle">5</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="478" cy="214" r="11"/><text class="dg-badge__n" x="478" y="218" text-anchor="middle">4</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="250" cy="314" r="11"/><text class="dg-badge__n" x="250" y="318" text-anchor="middle">1</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="250" cy="414" r="11"/><text class="dg-badge__n" x="250" y="418" text-anchor="middle">2</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="478" cy="414" r="11"/><text class="dg-badge__n" x="478" y="418" text-anchor="middle">3</text></g>
+            </svg>
+            <svg class="dg dg--narrow" viewBox="0 0 320 580" role="img" aria-labelledby="dpn-t dpn-d" focusable="false">
+              <title id="dpn-t" data-i18n="data.dg.title">Arquitetura da plataforma de dados em sete camadas</title>
+              <desc id="dpn-d" data-i18n="data.dg.desc">Diagrama de fluxo. Fontes de dados alimentam a camada de ingestão e transformação (Sling e dbt), que carrega o datalake PostgreSQL 17 e é orquestrada pelo Dagster. O Superset lê o datalake e seus dashboards são embutidos no portal executivo, que o executivo acessa pela borda Traefik. O portal conversa com o agente de IA (Dify, LiteLLM e Langfuse), que usa um provedor de modelo externo. O OpenMetadata cataloga o Postgres e recebe metadados do Dagster, com linhagem onde disponível. As camadas são numeradas de 1 a 7: ingestão e transformação, orquestração, catálogo e linhagem, BI, portal executivo, agente de IA e borda.</desc>
+              <defs><marker id="dpn-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+              <path class="dg-edge" d="M152,38 H168" marker-end="url(#dpn-ah)"/>
+              <path class="dg-edge" d="M240,66 V94" marker-end="url(#dpn-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M80,178 V150" marker-end="url(#dpn-ah)"/>
+              <path class="dg-edge" d="M240,150 V178" marker-end="url(#dpn-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M80,262 V234" marker-end="url(#dpn-ah)"/>
+              <path class="dg-edge" d="M240,234 V262" marker-end="url(#dpn-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M80,346 V318" marker-end="url(#dpn-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M80,430 V402" marker-end="url(#dpn-ah)"/>
+              <path class="dg-edge" d="M240,430 V402" marker-end="url(#dpn-ah)"/>
+              <path class="dg-edge dg-edge--meta" d="M240,486 V514" marker-end="url(#dpn-ah)"/>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="8" y="10" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="80" y="35" text-anchor="middle" data-i18n="data.dg.exec.name">Executivo</text>
+                <text class="dg-sub" x="80" y="53" text-anchor="middle" data-i18n="data.dg.exec.sub">navegador · HTTPS</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="168" y="10" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="240" y="31" text-anchor="middle" data-i18n="data.dg.edge.name">Borda</text>
+                <text class="dg-sub" x="240" y="47" text-anchor="middle" data-i18n="data.dg.edge.sub">Traefik</text>
+                <text class="dg-sub" x="240" y="61" text-anchor="middle" data-i18n="data.dg.edge.sub2">proxy reverso · TLS</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="8" y="94" width="304" height="56" rx="8"/>
+                <text class="dg-name" x="160" y="115" text-anchor="middle" data-i18n="data.dg.portal.name">Portal executivo</text>
+                <text class="dg-sub" x="160" y="131" text-anchor="middle" data-i18n="data.dg.portal.sub">SSO · RLS por grupo</text>
+                <text class="dg-sub" x="160" y="145" text-anchor="middle" data-i18n="data.dg.portal.sub2">dashboards embutidos</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="8" y="178" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="80" y="199" text-anchor="middle" data-i18n="data.dg.bi.name">BI</text>
+                <text class="dg-sub" x="80" y="215" text-anchor="middle" data-i18n="data.dg.bi.sub">Apache Superset</text>
+                <text class="dg-sub" x="80" y="229" text-anchor="middle" data-i18n="data.dg.bi.sub2">lê analytics_*</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="168" y="178" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="240" y="199" text-anchor="middle" data-i18n="data.dg.agent.name">Agente de IA</text>
+                <text class="dg-sub" x="240" y="215" text-anchor="middle" data-i18n="data.dg.agent.sub">Dify · LiteLLM</text>
+                <text class="dg-sub" x="240" y="229" text-anchor="middle" data-i18n="data.dg.agent.sub2">Langfuse (rastreio)</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--data" x="8" y="262" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="80" y="283" text-anchor="middle" data-i18n="data.dg.lake.name">Datalake</text>
+                <text class="dg-sub" x="80" y="299" text-anchor="middle" data-i18n="data.dg.lake.sub">PostgreSQL 17</text>
+                <text class="dg-sub" x="80" y="313" text-anchor="middle" data-i18n="data.dg.lake.sub2">raw_* → analytics_*</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--ext" x="168" y="262" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="240" y="287" text-anchor="middle" data-i18n="data.dg.model.name">Modelo de IA</text>
+                <text class="dg-sub" x="240" y="305" text-anchor="middle" data-i18n="data.dg.model.sub">provedor externo</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="8" y="346" width="304" height="56" rx="8"/>
+                <text class="dg-name" x="160" y="371" text-anchor="middle" data-i18n="data.dg.ingest.name">Ingestão e transformação</text>
+                <text class="dg-sub" x="160" y="389" text-anchor="middle" data-i18n="data.dg.ingest.sub">Sling + dbt</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="8" y="430" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="80" y="455" text-anchor="middle" data-i18n="data.dg.src.name">Fontes de dados</text>
+                <text class="dg-sub" x="80" y="473" text-anchor="middle" data-i18n="data.dg.src.sub">bancos de origem</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="168" y="430" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="240" y="455" text-anchor="middle" data-i18n="data.dg.orch.name">Orquestração</text>
+                <text class="dg-sub" x="240" y="473" text-anchor="middle" data-i18n="data.dg.orch.sub">Dagster</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="8" y="514" width="304" height="56" rx="8"/>
+                <text class="dg-name" x="160" y="535" text-anchor="middle" data-i18n="data.dg.catalog.name">Catálogo e linhagem</text>
+                <text class="dg-sub" x="160" y="551" text-anchor="middle" data-i18n="data.dg.catalog.sub">OpenMetadata</text>
+                <text class="dg-sub" x="160" y="565" text-anchor="middle" data-i18n="data.dg.catalog.sub2">linhagem onde disponível</text>
+              </g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="182" cy="10" r="11"/><text class="dg-badge__n" x="182" y="14" text-anchor="middle">7</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="22" cy="94" r="11"/><text class="dg-badge__n" x="22" y="98" text-anchor="middle">5</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="22" cy="178" r="11"/><text class="dg-badge__n" x="22" y="182" text-anchor="middle">4</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="182" cy="178" r="11"/><text class="dg-badge__n" x="182" y="182" text-anchor="middle">6</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="22" cy="346" r="11"/><text class="dg-badge__n" x="22" y="350" text-anchor="middle">1</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="182" cy="430" r="11"/><text class="dg-badge__n" x="182" y="434" text-anchor="middle">2</text></g>
+              <g class="dg-badge"><circle class="dg-badge__c" cx="22" cy="514" r="11"/><text class="dg-badge__n" x="22" y="518" text-anchor="middle">3</text></g>
+            </svg>
+            <figcaption data-i18n="data.figure">Diagrama da arquitetura da plataforma de dados</figcaption>
+          </figure>
+          <aside class="decisions card">
+            <h3 class="decisions__title" data-i18n="decisions.title">Decisões de arquitetura</h3>
+            <ul>
+              <li class="decision"><strong class="decision__t" data-i18n="data.dec.1.t">Um Postgres, um role e um banco por serviço</strong> <span class="decision__b" data-i18n="data.dec.1.b">Todas as stacks usam o mesmo Postgres 17, mas cada serviço tem role e banco próprios; o role do datalake não é superusuário e não acessa os bancos do Dify, Langfuse e LiteLLM.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="data.dec.2.t">Instalação por empresa, por um script</strong> <span class="decision__b" data-i18n="data.dec.2.b">Cada empresa ganha a própria instalação (portal single-tenant). O script gera os .env sem rotacionar segredos existentes, sobe os serviços na ordem certa e cria os administradores. Virar multi-tenant é uma refatoração conhecida, não uma reescrita.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="data.dec.3.t">Uma borda compartilhada</strong> <span class="decision__b" data-i18n="data.dec.3.b">Um único Traefik é a entrada pública de toda a solução, no lugar de um proxy por stack. O banco nunca fica na rede do proxy.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="data.dec.4.t">Embedding sem expor credenciais</strong> <span class="decision__b" data-i18n="data.dec.4.b">Só o backend fala com o endpoint de guest token do Superset. O frontend recebe um token de curta duração (cerca de 5 minutos), já com o RLS dos grupos do usuário.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="data.dec.5.t">Superset como única ferramenta de BI</strong> <span class="decision__b" data-i18n="data.dec.5.b">Comparei três opções. O Lightdash não oferece embedding na edição open source auto-hospedada; o Superset é Apache 2.0, sem recursos travados, com RBAC e RLS maduros.</span></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="minha-loja" class="section section--alt project" aria-labelledby="loja-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker" aria-hidden="true">03</p>
+          <h2 id="loja-title" class="section__title" data-i18n="loja.title">Minha Loja</h2>
+          <span class="project__tag" data-i18n="loja.tag">SaaS web e mobile</span>
+          <p class="section__lead" data-i18n="loja.lead">SaaS de gestão administrativa para organizações de associados.</p>
+        </header>
+        <div class="story">
+          <div class="story__item">
+            <h3 class="story__label" data-i18n="story.label.what">O que é</h3>
+            <p data-i18n="loja.story.what">SaaS de gestão administrativa para organizações de associados, com app web e app mobile em paridade de funcionalidades sobre o mesmo backend. Os módulos cobrem associados, financeiro, reuniões e atas, comunicados e cobrança da assinatura.</p>
+          </div>
+          <div class="story__item">
+            <h3 class="story__label" data-i18n="story.label.how">Como é montado</h3>
+            <p data-i18n="loja.story.how">Monorepo pnpm com web em Next.js 15 e React 19, mobile em Expo (React Native) e API em Fastify v5 com TypeScript, sobre PostgreSQL 17 com Drizzle. Schemas Zod e design tokens são pacotes compartilhados. O isolamento entre organizações usa uma coluna de tenant em cada tabela de dados de tenant, mais RLS, e a autenticação é própria, com JWT RS256.</p>
+          </div>
+          <div class="story__item">
+            <h3 class="story__label" data-i18n="story.label.why">Por que assim</h3>
+            <p data-i18n="loja.story.why">Escolhi um backend próprio, e não um BaaS, para ter controle total sobre dados sensíveis e conformidade com a LGPD, e TypeScript de ponta a ponta para compartilhar a validação entre clientes e API. Só a API tem mais de 60 arquivos de teste, incluindo testes de isolamento por RLS.</p>
+          </div>
+        </div>
+        <div class="project__grid">
+                    <figure class="diagram" data-diagram="minha-loja">
+            <svg class="dg dg--wide" viewBox="0 0 680 470" role="img" aria-labelledby="mlw-t mlw-d" focusable="false">
+              <title id="mlw-t" data-i18n="loja.dg.title">Arquitetura do Minha Loja: web, mobile, API, banco e pacotes compartilhados</title>
+              <desc id="mlw-d" data-i18n="loja.dg.desc">Diagrama em camadas. Os apps web (Next.js) e mobile (Expo) chamam a mesma API Fastify, que aplica autenticação JWT RS256, permissões, serviços e repositórios. A API grava no PostgreSQL 17, onde cada tabela de dados de tenant tem uma coluna de tenant protegida por RLS. Pacotes compartilhados de schemas Zod e design tokens são usados por web, mobile e API.</desc>
+              <defs><marker id="mlw-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+              <path class="dg-edge dg-edge--meta" d="M185,76 V132" marker-end="url(#mlw-ah)"/>
+              <path class="dg-edge dg-edge--meta" d="M495,76 V132" marker-end="url(#mlw-ah)"/>
+              <path class="dg-edge dg-edge--meta" d="M30,76 V290 H60" marker-end="url(#mlw-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M185,196 V252" marker-end="url(#mlw-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M495,196 V252" marker-end="url(#mlw-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M340,328 V380" marker-end="url(#mlw-ah)"/>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--shared" x="8" y="12" width="664" height="64" rx="8"/>
+                <text class="dg-name" x="340" y="36" text-anchor="middle" data-i18n="loja.dg.shared.name">Pacotes compartilhados</text>
+                <text class="dg-sub" x="340" y="54" text-anchor="middle" data-i18n="loja.dg.shared.sub">Schemas Zod · design tokens</text>
+                <text class="dg-sub" x="340" y="69" text-anchor="middle" data-i18n="loja.dg.shared.sub2">usados por web, mobile e API</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="60" y="132" width="250" height="64" rx="8"/>
+                <text class="dg-name" x="185" y="156" text-anchor="middle" data-i18n="loja.dg.web.name">Web</text>
+                <text class="dg-sub" x="185" y="174" text-anchor="middle" data-i18n="loja.dg.web.sub">Next.js 15 · React 19</text>
+                <text class="dg-sub" x="185" y="189" text-anchor="middle" data-i18n="loja.dg.web.sub2">área autenticada</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="370" y="132" width="250" height="64" rx="8"/>
+                <text class="dg-name" x="495" y="156" text-anchor="middle" data-i18n="loja.dg.mobile.name">Mobile</text>
+                <text class="dg-sub" x="495" y="174" text-anchor="middle" data-i18n="loja.dg.mobile.sub">Expo · React Native</text>
+                <text class="dg-sub" x="495" y="189" text-anchor="middle" data-i18n="loja.dg.mobile.sub2">abas e pilha de navegação</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="60" y="252" width="560" height="76" rx="8"/>
+                <text class="dg-name" x="340" y="276" text-anchor="middle" data-i18n="loja.dg.api.name">API</text>
+                <text class="dg-sub" x="340" y="296" text-anchor="middle" data-i18n="loja.dg.api.sub">Fastify v5 · TypeScript · OpenAPI</text>
+                <text class="dg-sub" x="340" y="314" text-anchor="middle" data-i18n="loja.dg.api.sub2">auth → permissões → serviço → repositório</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--data" x="60" y="380" width="560" height="76" rx="8"/>
+                <text class="dg-name" x="340" y="404" text-anchor="middle" data-i18n="loja.dg.db.name">PostgreSQL 17 + Drizzle</text>
+                <text class="dg-sub" x="340" y="424" text-anchor="middle" data-i18n="loja.dg.db.sub">coluna de tenant em tabelas de tenant · RLS</text>
+                <text class="dg-sub" x="340" y="442" text-anchor="middle" data-i18n="loja.dg.db.sub2">livro financeiro append-only · log de auditoria</text>
+              </g>
+              <text class="dg-label" x="197" y="229" text-anchor="start" data-i18n="loja.dg.edge.jwt">JWT RS256</text>
+              <text class="dg-label" x="507" y="229" text-anchor="start" data-i18n="loja.dg.edge.jwt">JWT RS256</text>
+              <text class="dg-label" x="352" y="359" text-anchor="start" data-i18n="loja.dg.edge.tenant">tenant vem do JWT</text>
+            </svg>
+            <svg class="dg dg--narrow" viewBox="0 0 320 330" role="img" aria-labelledby="mln-t mln-d" focusable="false">
+              <title id="mln-t" data-i18n="loja.dg.title">Arquitetura do Minha Loja: web, mobile, API, banco e pacotes compartilhados</title>
+              <desc id="mln-d" data-i18n="loja.dg.desc">Diagrama em camadas. Os apps web (Next.js) e mobile (Expo) chamam a mesma API Fastify, que aplica autenticação JWT RS256, permissões, serviços e repositórios. A API grava no PostgreSQL 17, onde cada tabela de dados de tenant tem uma coluna de tenant protegida por RLS. Pacotes compartilhados de schemas Zod e design tokens são usados por web, mobile e API.</desc>
+              <defs><marker id="mln-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+              <path class="dg-edge dg-edge--meta" d="M80,66 V94" marker-end="url(#mln-ah)"/>
+              <path class="dg-edge dg-edge--meta" d="M240,66 V94" marker-end="url(#mln-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M80,150 V178" marker-end="url(#mln-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M240,150 V178" marker-end="url(#mln-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M160,234 V262" marker-end="url(#mln-ah)"/>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--shared" x="8" y="10" width="304" height="56" rx="8"/>
+                <text class="dg-name" x="160" y="31" text-anchor="middle" data-i18n="loja.dg.shared.name">Pacotes compartilhados</text>
+                <text class="dg-sub" x="160" y="47" text-anchor="middle" data-i18n="loja.dg.shared.sub">Schemas Zod · design tokens</text>
+                <text class="dg-sub" x="160" y="61" text-anchor="middle" data-i18n="loja.dg.shared.sub2">usados por web, mobile e API</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="8" y="94" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="80" y="115" text-anchor="middle" data-i18n="loja.dg.web.name">Web</text>
+                <text class="dg-sub" x="80" y="131" text-anchor="middle" data-i18n="loja.dg.web.sub">Next.js 15 · React 19</text>
+                <text class="dg-sub" x="80" y="145" text-anchor="middle" data-i18n="loja.dg.web.sub2">área autenticada</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="168" y="94" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="240" y="119" text-anchor="middle" data-i18n="loja.dg.mobile.name">Mobile</text>
+                <text class="dg-sub" x="240" y="137" text-anchor="middle" data-i18n="loja.dg.mobile.sub">Expo · React Native</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="8" y="178" width="304" height="56" rx="8"/>
+                <text class="dg-name" x="160" y="199" text-anchor="middle" data-i18n="loja.dg.api.name">API</text>
+                <text class="dg-sub" x="160" y="215" text-anchor="middle" data-i18n="loja.dg.api.sub">Fastify v5 · TypeScript · OpenAPI</text>
+                <text class="dg-sub" x="160" y="229" text-anchor="middle" data-i18n="loja.dg.api.sub2">auth → permissões → serviço → repositório</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--data" x="8" y="262" width="304" height="56" rx="8"/>
+                <text class="dg-name" x="160" y="283" text-anchor="middle" data-i18n="loja.dg.db.name">PostgreSQL 17 + Drizzle</text>
+                <text class="dg-sub" x="160" y="299" text-anchor="middle" data-i18n="loja.dg.db.sub">coluna de tenant em tabelas de tenant · RLS</text>
+                <text class="dg-sub" x="160" y="313" text-anchor="middle" data-i18n="loja.dg.db.sub2">livro financeiro append-only · log de auditoria</text>
+              </g>
+            </svg>
+            <figcaption data-i18n="loja.figure">Diagrama da arquitetura do Minha Loja</figcaption>
+          </figure>
+          <aside class="decisions card">
+            <h3 class="decisions__title" data-i18n="decisions.title">Decisões de arquitetura</h3>
+            <ul>
+              <li class="decision"><strong class="decision__t" data-i18n="loja.dec.1.t">Schema compartilhado com coluna de tenant e RLS</strong> <span class="decision__b" data-i18n="loja.dec.1.b">Toda tabela de dados de tenant tem uma coluna de tenant, e o RLS do PostgreSQL reforça o isolamento como camada extra de defesa. Banco por tenant e schema por tenant foram descartados pelo custo de migração.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="loja.dec.2.t">O tenant vem sempre do JWT</strong> <span class="decision__b" data-i18n="loja.dec.2.b">O backend injeta o tenant somente a partir das claims do JWT (RS256, token de acesso de 15 minutos), nunca do corpo da requisição.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="loja.dec.3.t">Schemas Zod compartilhados</strong> <span class="decision__b" data-i18n="loja.dec.3.b">TypeScript de ponta a ponta: os mesmos schemas Zod validam web, mobile e API, sem regras duplicadas. Um único pacote de design tokens serve web e mobile.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="loja.dec.4.t">Permissões em uma matriz declarativa</strong> <span class="decision__b" data-i18n="loja.dec.4.b">Uma matriz declarativa de permissões, com um ponto de checagem no backend (authorize) e outro nos clientes (usePermission), em vez de condicionais espalhadas.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="loja.dec.5.t">Livro financeiro append-only</strong> <span class="decision__b" data-i18n="loja.dec.5.b">Lançamentos não têm rotas de alteração nem de exclusão; correções entram como novos lançamentos de crédito ou estorno, preservando a trilha de auditoria.</span></li>
+            </ul>
+          </aside>
+        </div>
+        <figure class="mockup" data-mockup="minha-loja">
+          <div class="mk mk-dash" aria-hidden="true">
+            <div class="mk-dash__bar">
+              <span class="mk-dot"></span><span class="mk-dot"></span><span class="mk-dot"></span>
+              <span class="mk-dash__org" data-i18n="loja.mk.org">Organização Exemplo</span>
+              <span class="mk-dash__user" data-i18n="loja.mk.user">Usuário Exemplo</span>
+            </div>
+            <div class="mk-dash__body">
+              <ul class="mk-nav">
+              <li class="mk-nav__item mk-nav__item--on" data-i18n="loja.mk.nav.home">Início</li>
+              <li class="mk-nav__item" data-i18n="loja.mk.nav.members">Associados</li>
+              <li class="mk-nav__item" data-i18n="loja.mk.nav.finance">Financeiro</li>
+              <li class="mk-nav__item" data-i18n="loja.mk.nav.meetings">Reuniões</li>
+              <li class="mk-nav__item" data-i18n="loja.mk.nav.comms">Comunicados</li>
+              </ul>
+              <div class="mk-main">
+                <p class="mk-main__title" data-i18n="loja.mk.title">Mural de comunicados</p>
+                <div class="mk-search"><span data-i18n="loja.mk.search">Buscar comunicados</span></div>
+                <div class="mk-filters">
+                <span class="mk-pill mk-pill--on" data-i18n="loja.mk.cat.all">Todos</span>
+                <span class="mk-pill" data-i18n="loja.mk.cat.general">Geral</span>
+                <span class="mk-pill" data-i18n="loja.mk.cat.events">Eventos</span>
+                <span class="mk-pill" data-i18n="loja.mk.cat.fin">Financeiro</span>
+                </div>
+                <div class="mk-post">
+                  <div class="mk-post__meta"><span class="mk-pill" data-i18n="loja.mk.cat.events">Eventos</span><span class="mk-post__date" data-i18n="loja.mk.p1.d">12 nov</span></div>
+                  <p class="mk-post__t" data-i18n="loja.mk.p1.t">Assembleia geral de dezembro</p>
+                  <p class="mk-post__b" data-i18n="loja.mk.p1.b">Pauta e horário publicados; confirme presença até sexta.</p>
+                  <div class="mk-post__react"><span class="mk-react">♥ 12</span><span class="mk-react">✓ 5</span></div>
+                </div>
+                <div class="mk-post">
+                  <div class="mk-post__meta"><span class="mk-pill" data-i18n="loja.mk.cat.fin">Financeiro</span><span class="mk-post__date" data-i18n="loja.mk.p2.d">10 nov</span></div>
+                  <p class="mk-post__t" data-i18n="loja.mk.p2.t">Calendário de mensalidades atualizado</p>
+                  <p class="mk-post__b" data-i18n="loja.mk.p2.b">Os novos vencimentos valem a partir do próximo mês.</p>
+                  <div class="mk-post__react"><span class="mk-react">♥ 8</span><span class="mk-react">✓ 2</span></div>
+                </div>
+                <div class="mk-post">
+                  <div class="mk-post__meta"><span class="mk-pill" data-i18n="loja.mk.cat.general">Geral</span><span class="mk-post__date" data-i18n="loja.mk.p3.d">08 nov</span></div>
+                  <p class="mk-post__t" data-i18n="loja.mk.p3.t">Confraternização de fim de ano</p>
+                  <p class="mk-post__b" data-i18n="loja.mk.p3.b">Inscrições abertas para associados e familiares.</p>
+                  <div class="mk-post__react"><span class="mk-react">♥ 21</span><span class="mk-react">✓ 9</span></div>
+                </div>
+                <div class="mk-pager">
+                  <span class="mk-pager__btn">‹</span><span class="mk-pager__btn mk-pager__btn--on">1</span><span class="mk-pager__btn">2</span><span class="mk-pager__btn">3</span><span class="mk-pager__btn">›</span>
+                  <span class="mk-pager__label" data-i18n="loja.mk.page">Página 1 de 3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption data-i18n="loja.mockup">Mockup do dashboard (dados fictícios)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="lou" class="section project" aria-labelledby="lou-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker" aria-hidden="true">04</p>
+          <h2 id="lou-title" class="section__title" data-i18n="lou.title">LOU</h2>
+          <span class="project__tag" data-i18n="lou.tag">App mobile e API</span>
+          <p class="section__lead" data-i18n="lou.lead">App de bem-estar e relacionamento para casais 35+.</p>
+        </header>
+        <div class="story">
+          <div class="story__item">
+            <h3 class="story__label" data-i18n="story.label.what">O que é</h3>
+            <p data-i18n="lou.story.what">App mobile de bem-estar e relacionamento para casais 35+, com onboarding, criação de casal por código de convite, conteúdo guiado em áudio e vídeo e notificações push.</p>
+          </div>
+          <div class="story__item">
+            <h3 class="story__label" data-i18n="story.label.how">Como é montado</h3>
+            <p data-i18n="lou.story.how">App em Expo (React Native, Expo Router), com estado em Zustand e dados do servidor em TanStack Query. API FastAPI com SQLAlchemy assíncrono e Alembic sobre PostgreSQL 16, com Redis 7 provisionado no Compose. Tudo roda em Docker Compose numa VM Linux, com nginx no stack de produção.</p>
+          </div>
+          <div class="story__item">
+            <h3 class="story__label" data-i18n="story.label.why">Por que assim</h3>
+            <p data-i18n="lou.story.why">Priorizei time-to-market e custo previsível: Expo gerenciado, FastAPI pela velocidade de desenvolvimento e uma VM com Compose, sem vendor lock-in. O app nasce com quatro locales para atender a região DACH e o Brasil.</p>
+          </div>
+        </div>
+        <div class="project__grid">
+          <figure class="diagram" data-diagram="lou">
+            <svg class="dg dg--wide" viewBox="0 0 680 434" role="img" aria-labelledby="louw-t louw-d" focusable="false">
+              <title id="louw-t" data-i18n="lou.dg.title">Arquitetura do LOU: app mobile, API, PostgreSQL e duas regiões</title>
+              <desc id="louw-d" data-i18n="lou.dg.desc">Diagrama de arquitetura. O app mobile em Expo atende duas regiões: DACH, com alemão como idioma padrão (de, de-AT e de-CH), e Brasil (pt-BR). O app fala com uma API FastAPI, que usa PostgreSQL 16 com RLS e envia notificações push pela Expo Push API. Redis 7 está provisionado no Docker Compose, mas ainda não é usado pela aplicação. Tudo roda numa VM Linux com Docker Compose, com nginx no stack de produção.</desc>
+              <defs><marker id="louw-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+              <path class="dg-edge dg-edge--meta" d="M113,66 V116" marker-end="url(#louw-ah)"/>
+              <path class="dg-edge dg-edge--meta" d="M343,66 V116" marker-end="url(#louw-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M84,180 V248" marker-end="url(#louw-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M144,280 H164" marker-end="url(#louw-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M424,280 H444" marker-end="url(#louw-ah)"/>
+              <path class="dg-edge" d="M400,248 V200 H576 V74" marker-end="url(#louw-ah)"/>
+              <rect class="dg-group" x="8" y="210" width="664" height="214" rx="10"/>
+              <text class="dg-group__label" x="110" y="230" text-anchor="start" data-i18n="lou.dg.vm.label">Linux VM · Docker Compose</text>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="8" y="10" width="210" height="56" rx="8"/>
+                <text class="dg-name" x="113" y="31" text-anchor="middle" data-i18n="lou.dg.dach.name">DACH</text>
+                <text class="dg-sub" x="113" y="47" text-anchor="middle" data-i18n="lou.dg.dach.sub">de (padrão)</text>
+                <text class="dg-sub" x="113" y="61" text-anchor="middle" data-i18n="lou.dg.dach.sub2">de-AT · de-CH</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="238" y="10" width="210" height="56" rx="8"/>
+                <text class="dg-name" x="343" y="35" text-anchor="middle" data-i18n="lou.dg.br.name">Brasil</text>
+                <text class="dg-sub" x="343" y="53" text-anchor="middle" data-i18n="lou.dg.br.sub">pt-BR</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--ext" x="480" y="10" width="192" height="64" rx="8"/>
+                <text class="dg-name" x="576" y="34" text-anchor="middle" data-i18n="lou.dg.push.name">Expo Push</text>
+                <text class="dg-sub" x="576" y="52" text-anchor="middle" data-i18n="lou.dg.push.sub">notificações push</text>
+                <text class="dg-sub" x="576" y="67" text-anchor="middle" data-i18n="lou.dg.push.sub2">fila no banco</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="8" y="116" width="440" height="64" rx="8"/>
+                <text class="dg-name" x="228" y="140" text-anchor="middle" data-i18n="lou.dg.app.name">App mobile</text>
+                <text class="dg-sub" x="228" y="158" text-anchor="middle" data-i18n="lou.dg.app.sub">Expo Router · React Native</text>
+                <text class="dg-sub" x="228" y="173" text-anchor="middle" data-i18n="lou.dg.app.sub2">i18next · Zustand · TanStack Query</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="24" y="248" width="120" height="64" rx="8"/>
+                <text class="dg-name" x="84" y="276" text-anchor="middle" data-i18n="lou.dg.proxy.name">nginx</text>
+                <text class="dg-sub" x="84" y="294" text-anchor="middle" data-i18n="lou.dg.proxy.sub">em produção</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="164" y="248" width="260" height="64" rx="8"/>
+                <text class="dg-name" x="294" y="272" text-anchor="middle" data-i18n="lou.dg.api.name">API</text>
+                <text class="dg-sub" x="294" y="290" text-anchor="middle" data-i18n="lou.dg.api.sub">FastAPI · SQLAlchemy 2 async</text>
+                <text class="dg-sub" x="294" y="305" text-anchor="middle" data-i18n="lou.dg.api.sub2">routers · RoleGuard · agendador</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--data" x="444" y="248" width="212" height="64" rx="8"/>
+                <text class="dg-name" x="550" y="272" text-anchor="middle" data-i18n="lou.dg.pg.name">PostgreSQL 16</text>
+                <text class="dg-sub" x="550" y="290" text-anchor="middle" data-i18n="lou.dg.pg.sub">RLS · role sem dono</text>
+                <text class="dg-sub" x="550" y="305" text-anchor="middle" data-i18n="lou.dg.pg.sub2">migrações Alembic</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--ext" x="164" y="338" width="260" height="64" rx="8"/>
+                <text class="dg-name" x="294" y="362" text-anchor="middle" data-i18n="lou.dg.redis.name">Redis 7</text>
+                <text class="dg-sub" x="294" y="380" text-anchor="middle" data-i18n="lou.dg.redis.sub">provisionado no Compose</text>
+                <text class="dg-sub" x="294" y="395" text-anchor="middle" data-i18n="lou.dg.redis.sub2">ainda sem uso na aplicação</text>
+              </g>
+            </svg>
+            <svg class="dg dg--narrow" viewBox="0 0 320 440" role="img" aria-labelledby="loun-t loun-d" focusable="false">
+              <title id="loun-t" data-i18n="lou.dg.title">Arquitetura do LOU: app mobile, API, PostgreSQL e duas regiões</title>
+              <desc id="loun-d" data-i18n="lou.dg.desc">Diagrama de arquitetura. O app mobile em Expo atende duas regiões: DACH, com alemão como idioma padrão (de, de-AT e de-CH), e Brasil (pt-BR). O app fala com uma API FastAPI, que usa PostgreSQL 16 com RLS e envia notificações push pela Expo Push API. Redis 7 está provisionado no Docker Compose, mas ainda não é usado pela aplicação. Tudo roda numa VM Linux com Docker Compose, com nginx no stack de produção.</desc>
+              <defs><marker id="loun-ah" class="dg-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path class="dg-ah__p" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+              <path class="dg-edge dg-edge--meta" d="M80,66 V94" marker-end="url(#loun-ah)"/>
+              <path class="dg-edge dg-edge--meta" d="M240,66 V94" marker-end="url(#loun-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M160,150 V178" marker-end="url(#loun-ah)"/>
+              <path class="dg-edge dg-edge--flow" d="M80,234 V262" marker-end="url(#loun-ah)"/>
+              <path class="dg-edge" d="M240,234 V262" marker-end="url(#loun-ah)"/>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="8" y="10" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="80" y="31" text-anchor="middle" data-i18n="lou.dg.dach.name">DACH</text>
+                <text class="dg-sub" x="80" y="47" text-anchor="middle" data-i18n="lou.dg.dach.sub">de (padrão)</text>
+                <text class="dg-sub" x="80" y="61" text-anchor="middle" data-i18n="lou.dg.dach.sub2">de-AT · de-CH</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--actor" x="168" y="10" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="240" y="35" text-anchor="middle" data-i18n="lou.dg.br.name">Brasil</text>
+                <text class="dg-sub" x="240" y="53" text-anchor="middle" data-i18n="lou.dg.br.sub">pt-BR</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="8" y="94" width="304" height="56" rx="8"/>
+                <text class="dg-name" x="160" y="115" text-anchor="middle" data-i18n="lou.dg.app.name">App mobile</text>
+                <text class="dg-sub" x="160" y="131" text-anchor="middle" data-i18n="lou.dg.app.sub">Expo Router · React Native</text>
+                <text class="dg-sub" x="160" y="145" text-anchor="middle" data-i18n="lou.dg.app.sub2">i18next · Zustand · TanStack Query</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--layer" x="8" y="178" width="304" height="56" rx="8"/>
+                <text class="dg-name" x="160" y="199" text-anchor="middle" data-i18n="lou.dg.api.name">API</text>
+                <text class="dg-sub" x="160" y="215" text-anchor="middle" data-i18n="lou.dg.api.sub">FastAPI · SQLAlchemy 2 async</text>
+                <text class="dg-sub" x="160" y="229" text-anchor="middle" data-i18n="lou.dg.api.sub2">routers · RoleGuard · agendador</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--data" x="8" y="262" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="80" y="287" text-anchor="middle" data-i18n="lou.dg.pg.name">PostgreSQL 16</text>
+                <text class="dg-sub" x="80" y="305" text-anchor="middle" data-i18n="lou.dg.pg.sub">RLS · role sem dono</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--ext" x="168" y="262" width="144" height="56" rx="8"/>
+                <text class="dg-name" x="240" y="287" text-anchor="middle" data-i18n="lou.dg.push.name">Expo Push</text>
+                <text class="dg-sub" x="240" y="305" text-anchor="middle" data-i18n="lou.dg.push.sub">notificações push</text>
+              </g>
+              <g class="dg-node">
+                <rect class="dg-box dg-box--ext" x="8" y="346" width="304" height="56" rx="8"/>
+                <text class="dg-name" x="160" y="367" text-anchor="middle" data-i18n="lou.dg.redis.name">Redis 7</text>
+                <text class="dg-sub" x="160" y="383" text-anchor="middle" data-i18n="lou.dg.redis.sub">provisionado no Compose</text>
+                <text class="dg-sub" x="160" y="397" text-anchor="middle" data-i18n="lou.dg.redis.sub2">ainda sem uso na aplicação</text>
+              </g>
+              <text class="dg-label" x="160" y="428" text-anchor="middle" data-i18n="lou.dg.vm.label">Linux VM · Docker Compose</text>
+            </svg>
+            <figcaption data-i18n="lou.figure">Diagrama da arquitetura do LOU</figcaption>
+          </figure>
+          <aside class="decisions card">
+            <h3 class="decisions__title" data-i18n="decisions.title">Decisões de arquitetura</h3>
+            <ul>
+              <li class="decision"><strong class="decision__t" data-i18n="lou.dec.1.t">Idiomas desde o primeiro dia</strong> <span class="decision__b" data-i18n="lou.dec.1.b">Quatro locales (de, pt-BR, de-AT, de-CH), com alemão como padrão, porque refatorar i18n depois custa caro. O texto dos conteúdos fica numa tabela por locale, para permitir mídias diferentes por idioma.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="lou.dec.2.t">Expo no fluxo gerenciado</strong> <span class="decision__b" data-i18n="lou.dec.2.b">Escolhido pelo time-to-market, para focar no produto em vez de na infraestrutura nativa.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="lou.dec.3.t">VM Linux com Docker Compose, sem serverless</strong> <span class="decision__b" data-i18n="lou.dec.3.b">Custo previsível, controle total e nenhum vendor lock-in.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="lou.dec.4.t">Agendador dentro da API</strong> <span class="decision__b" data-i18n="lou.dec.4.b">O APScheduler roda no processo da API em vez de um worker Celery, evitando um container a mais numa VM única. Migrar para Celery é simples se a escala exigir.</span></li>
+              <li class="decision"><strong class="decision__t" data-i18n="lou.dec.5.t">Isolamento por RLS com role sem dono</strong> <span class="decision__b" data-i18n="lou.dec.5.b">O isolamento de dados usa Row Level Security no PostgreSQL, e a API conecta com um role que não é dono das tabelas, porque donos ignoram o RLS.</span></li>
+            </ul>
+          </aside>
+        </div>
+        <figure class="mockup" data-mockup="lou">
+          <div class="mk mk-phones" aria-hidden="true">
+            <div class="mk-phone-wrap">
+              <p class="mk-phone__label" data-i18n="lou.mk.label1">Onboarding</p>
+              <div class="mk-phone">
+                <div class="mk-phone__notch"></div>
+                <div class="mk-screen">
+                  <p class="mk-s__h" data-i18n="lou.mk.s1.h">Bem-vindo ao LOU</p>
+                  <div class="mk-btn mk-btn--primary" data-i18n="lou.mk.s1.b1">Criar casal</div>
+                  <div class="mk-btn" data-i18n="lou.mk.s1.b2">Entrar com código de convite</div>
+                  <div class="mk-field"><span class="mk-field__l" data-i18n="lou.mk.s1.field">Código de convite</span><span class="mk-field__v">ABC-123</span></div>
+                  <div class="mk-langs"><span class="mk-pill mk-pill--on" lang="de">Deutsch</span><span class="mk-pill" lang="pt-BR">Português</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="mk-phone-wrap">
+              <p class="mk-phone__label" data-i18n="lou.mk.label2">Início</p>
+              <div class="mk-phone">
+                <div class="mk-phone__notch"></div>
+                <div class="mk-screen">
+                  <p class="mk-s__muted" data-i18n="lou.mk.s2.h">Boa tarde</p>
+                  <div class="mk-card">
+                    <p class="mk-card__t" data-i18n="lou.mk.s2.card.t">Conteúdo guiado de hoje</p>
+                    <p class="mk-card__b" data-i18n="lou.mk.s2.card.b">Um exercício curto para fazer em dupla.</p>
+                    <div class="mk-bar"><div class="mk-bar__fill mk-bar__fill--40"></div></div>
+                    <p class="mk-card__meta" data-i18n="lou.mk.s2.progress">2 de 5 concluídos</p>
+                  </div>
+                  <div class="mk-tabs"><span class="mk-tab mk-tab--on" data-i18n="lou.mk.label2">Início</span><span class="mk-tab" data-i18n="lou.mk.s2.tab2">Notificações</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="mk-phone-wrap">
+              <p class="mk-phone__label" data-i18n="lou.mk.label3">Conteúdo guiado</p>
+              <div class="mk-phone">
+                <div class="mk-phone__notch"></div>
+                <div class="mk-screen">
+                  <p class="mk-s__h" data-i18n="lou.mk.s3.h">Conversa guiada</p>
+                  <p class="mk-s__muted" data-i18n="lou.mk.s3.meta">Áudio · 5 min</p>
+                  <p class="mk-s__b" data-i18n="lou.mk.s3.b">Um exercício curto, feito em dupla, para praticar escuta e diálogo.</p>
+                  <div class="mk-player"><span class="mk-player__play">▶</span><div class="mk-bar"><div class="mk-bar__fill mk-bar__fill--30"></div></div><span class="mk-player__t">01:20 / 05:00</span></div>
+                  <div class="mk-btn mk-btn--primary" data-i18n="lou.mk.s3.btn">Marcar como concluído</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption data-i18n="lou.mockup">Mockup de tela mobile (dados fictícios)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="method" class="section section--alt" aria-labelledby="method-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker" aria-hidden="true">05</p>
+          <h2 id="method-title" class="section__title" data-i18n="method.title">Como eu construo</h2>
+          <p class="section__lead" data-i18n="method.lead">Método de desenvolvimento assistido por IA, com disciplina de engenharia.</p>
+        </header>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num" aria-hidden="true"></span>
+            <h3 class="step__title" data-i18n="method.step1.title">Planejamento por fases</h3>
+            <p class="step__body" data-i18n="method.step1.body">Cada entrega é dividida em fases. Toda fase segue o mesmo ciclo: pesquisa, mapeamento de padrões, plano, checagem do plano, execução por ondas, verificação e fechamento.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true"></span>
+            <h3 class="step__title" data-i18n="method.step2.title">Branches protegidas</h3>
+            <p class="step__body" data-i18n="method.step2.body">A branch principal é protegida: mudanças entram só por pull request, sem force push nem exclusão. Em um dos projetos há duas branches protegidas, integração e produção, com CI obrigatório e promoção manual.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true"></span>
+            <h3 class="step__title" data-i18n="method.step3.title">PR por fase</h3>
+            <p class="step__body" data-i18n="method.step3.body">Cada fase roda na própria branch e fecha com um pull request, com commits atômicos a cada tarefa. A fase seguinte só começa depois do merge, e o merge é sempre uma decisão humana.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true"></span>
+            <h3 class="step__title" data-i18n="method.step4.title">Verificação independente</h3>
+            <p class="step__body" data-i18n="method.step4.body">Um verificador independente reconfere cada fase ao vivo, sem se apoiar só no resumo de quem executou, e já encontrou lacunas reais de qualidade. Entregas visuais passam por checkpoint humano em navegador real; em uma fase, ele achou 4 bugs que nenhum teste automatizado pegaria.</p>
+          </li>
+        </ol>
+        <p class="method-note" data-i18n="method.note">Verificações adiadas recebem o status formal PASS-WITH-KNOWN-GAP, com a lacuna declarada, em vez de serem dadas como aprovadas. Segredos reais nunca são versionados.</p>
+      </div>
+    </section>
+
+    <section id="stack" class="section" aria-labelledby="stack-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker" aria-hidden="true">06</p>
+          <h2 id="stack-title" class="section__title" data-i18n="stack.title">Stack e competências</h2>
+          <p class="section__lead" data-i18n="stack.lead">Tecnologias agrupadas por área.</p>
+        </header>
+        <div class="stack-grid">
+          <div class="stack-group">
+            <h3 data-i18n="stack.group.data">Dados</h3>
+            <ul class="chips stack-chips">
+              <li class="chip">Dagster</li>
+              <li class="chip">Sling</li>
+              <li class="chip">dbt</li>
+              <li class="chip">PostgreSQL</li>
+              <li class="chip">Row-Level Security</li>
+              <li class="chip">OpenMetadata</li>
+              <li class="chip">Apache Superset</li>
+              <li class="chip">Drizzle ORM</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 data-i18n="stack.group.backend">Backend</h3>
+            <ul class="chips stack-chips">
+              <li class="chip">FastAPI</li>
+              <li class="chip">Python</li>
+              <li class="chip">SQLAlchemy</li>
+              <li class="chip">Alembic</li>
+              <li class="chip">Pydantic</li>
+              <li class="chip">Node.js</li>
+              <li class="chip">Fastify</li>
+              <li class="chip">TypeScript</li>
+              <li class="chip">Zod</li>
+              <li class="chip">JWT RS256</li>
+              <li class="chip">OIDC SSO</li>
+              <li class="chip">Argon2</li>
+              <li class="chip">REST + OpenAPI</li>
+              <li class="chip">Vitest</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 data-i18n="stack.group.frontend">Frontend e Mobile</h3>
+            <ul class="chips stack-chips">
+              <li class="chip">React 19</li>
+              <li class="chip">TypeScript</li>
+              <li class="chip">Vite</li>
+              <li class="chip">Next.js</li>
+              <li class="chip">React Native</li>
+              <li class="chip">Expo</li>
+              <li class="chip">Expo Router</li>
+              <li class="chip">Tailwind CSS</li>
+              <li class="chip">shadcn/ui</li>
+              <li class="chip">NativeWind</li>
+              <li class="chip">Zustand</li>
+              <li class="chip">TanStack Query</li>
+              <li class="chip">React Hook Form</li>
+              <li class="chip">i18next</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 data-i18n="stack.group.infra">Infra</h3>
+            <ul class="chips stack-chips">
+              <li class="chip">Docker Compose</li>
+              <li class="chip">Traefik</li>
+              <li class="chip">Redis</li>
+              <li class="chip">nginx</li>
+              <li class="chip">pnpm workspaces</li>
+              <li class="chip">GitHub Actions</li>
+              <li class="chip">Linux VM</li>
+              <li class="chip">Shell scripts</li>
+              <li class="chip">Makefile</li>
+              <li class="chip">S3-compatible storage</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 data-i18n="stack.group.ai">IA</h3>
+            <ul class="chips stack-chips">
+              <li class="chip">Dify</li>
+              <li class="chip">LiteLLM</li>
+              <li class="chip">Langfuse</li>
+              <li class="chip">CopilotKit</li>
+              <li class="chip">Hono</li>
+              <li class="chip">OpenTelemetry</li>
+              <li class="chip">RAG</li>
+              <li class="chip">OCR</li>
+              <li class="chip">Embeddings</li>
+              <li class="chip">Semantic search</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--alt contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker" aria-hidden="true">07</p>
+          <h2 id="contact-title" class="section__title" data-i18n="contact.title">Contato</h2>
+          <p class="section__lead" data-i18n="contact.lead">Aberto a conversar sobre vagas em Dados + IA e Arquitetura de Dados.</p>
+        </header>
+        <p class="contact__body" data-i18n="contact.body">Se a plataforma de dados, o método ou os projetos fazem sentido para a sua equipe, escreva. Posso detalhar qualquer decisão de arquitetura desta página em uma conversa.</p>
+        <div class="contact__links">
+          <a class="btn btn--primary" data-link="email" href="#contact" data-i18n="contact.cta">Enviar e-mail</a>
+          <a class="btn btn--ghost" data-link="linkedin" href="#contact" data-i18n="link.linkedin">LinkedIn</a>
+          <a class="btn btn--ghost" data-link="github" href="#contact" data-i18n="link.github">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Copyright ® <span data-config="name">Jorge Tomé</span></p>
+    </div>
+  </footer>
+</body>
+</html>

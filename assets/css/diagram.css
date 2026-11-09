@@ -1,0 +1,63 @@
+/* Diagram primitives (Phase 3). Colour only through design tokens; flow animation only when motion is allowed. */
+.diagram {
+  margin: 0;
+  min-width: 0;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.section--alt .diagram { background: var(--color-bg); }
+.diagram figcaption {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs--1);
+}
+
+.dg { display: block; width: 100%; height: auto; }
+.dg text { font-family: var(--font-sans); }
+.dg--narrow { max-width: 26rem; margin-inline: auto; }
+.dg--wide { display: none; max-width: 860px; margin-inline: auto; }
+@media (min-width: 720px) {
+  .dg--wide { display: block; }
+  .dg--narrow { display: none; }
+}
+
+/* Boxes */
+.dg-box { fill: var(--color-surface); stroke: var(--color-text-muted); stroke-width: 1.5; }
+.dg-box--layer { fill: var(--color-accent-soft); stroke: var(--color-accent); }
+.dg-box--data { fill: var(--color-surface-2); stroke: var(--color-text-muted); }
+.dg-box--actor { fill: var(--color-surface); stroke: var(--color-text-muted); }
+.dg-box--ext { fill: var(--color-surface); stroke: var(--color-text-muted); stroke-dasharray: 5 4; }
+.dg-box--shared { fill: var(--color-accent-2-soft); stroke: var(--color-accent-2); }
+.dg-box--note { fill: none; stroke: var(--color-text-muted); stroke-dasharray: 3 4; }
+
+/* Text */
+.dg .dg-name { fill: var(--color-text); font-size: 14px; font-weight: 600; }
+.dg .dg-sub { fill: var(--color-text-muted); font-size: 12px; }
+.dg .dg-label { fill: var(--color-text-muted); font-family: var(--font-mono); font-size: 12px; }
+.dg-badge__c { fill: var(--color-accent-2); }
+.dg .dg-badge__n { fill: var(--color-on-accent); font-family: var(--font-mono); font-size: 12px; font-weight: 700; }
+.dg-badge, .dg-node { pointer-events: none; stroke-linejoin: round; }
+
+/* Edges */
+.dg-edge {
+  fill: none;
+  stroke: var(--color-text-muted);
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.dg-edge--meta { stroke-dasharray: 5 4; }
+.dg-edge--flow { stroke: var(--color-accent); }
+@media (prefers-reduced-motion: no-preference) {
+  .dg-edge--flow { stroke-dasharray: 6 6; animation: dg-flow 1.6s linear infinite; }
+  @keyframes dg-flow { to { stroke-dashoffset: -12; } }
+}
+.dg-ah { overflow: visible; }
+.dg-ah__p { fill: var(--color-text-muted); }
+
+/* Groups */
+.dg-group { fill: none; stroke: var(--color-text-muted); stroke-width: 1.25; stroke-dasharray: 6 5; }
+.dg .dg-group__label { fill: var(--color-text-muted); font-family: var(--font-mono); font-size: 12px; }

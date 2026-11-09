@@ -1,0 +1,26 @@
+/* Content sections: method, stack, contact (Phase 3, plan 03-02). */
+
+.step__body { margin: 0; color: var(--color-text-muted); }
+.method-note {
+  max-width: 70ch;
+  margin: var(--space-5) 0 0;
+  padding-left: var(--space-4);
+  border-left: 3px solid var(--color-accent-2);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs--1);
+}
+.stack-group .stack-chips { margin: 0; padding-left: 0; list-style: none; }
+.contact .contact__body {
+  max-width: 44rem;
+  margin: 0 0 var(--space-5);
+  font-family: var(--font-sans);
+  font-size: var(--fs-1);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+}
+/* Wider stack columns so multi-word chips stay on one line (3 columns at desktop). */
+.stack-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
+/* Visual review fixes (03-06): more air in two-line step titles and in the large serif contact lead. */
+.step .step__title { line-height: 1.3; }
+.contact .section__lead { margin-top: var(--space-2); line-height: 1.3; }

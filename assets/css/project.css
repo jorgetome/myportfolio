@@ -1,0 +1,79 @@
+/* Project sections (Phase 3): story, decisions, mockup shell, project grid. */
+.story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+@media (min-width: 900px) {
+  .story { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.story__item {
+  min-width: 0;
+  padding-left: var(--space-4);
+  border-left: 3px solid var(--color-accent);
+}
+.story__label {
+  margin: 0 0 var(--space-2);
+  color: var(--color-accent-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs--1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.story__item p { margin: 0; }
+
+/* Project grid: one column up to 1099px (base rule in site.css), diagram plus decisions from 1100px. */
+@media (min-width: 1100px) {
+  .project__grid { grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr); gap: var(--space-6); }
+  .project__grid > .diagram { position: sticky; top: 9rem; align-self: start; }
+}
+
+.decisions .decision { margin-bottom: var(--space-3); }
+.decisions .decision__t { display: block; font-family: var(--font-serif); font-weight: 700; }
+.decisions .decision__b { color: var(--color-text-muted); }
+
+.mockup {
+  margin: var(--space-6) 0 0;
+  padding: var(--space-4);
+  min-width: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.section--alt .mockup { background: var(--color-bg); }
+.mockup figcaption {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs--1);
+}
+.mockup .mk { margin-inline: auto; }
+
+/* Project overview cards (portfolio list). */
+.project-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 900px) {
+  .project-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-1);
+}
+.project-card--anchor { border-color: var(--color-accent); border-width: 2px; }
+.project-card__title { margin: 0 0 var(--space-2); }
+.project-card__lead { margin: 0 0 var(--space-5); color: var(--color-text-muted); }
+.project-card .btn { margin-top: auto; }
